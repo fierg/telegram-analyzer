@@ -1,0 +1,38 @@
+version: '3.3'
+services:
+  search:
+    container_name: querscraper_search
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.16.3
+    ports:
+      - 9200:9200
+      - 9300:9300
+    environment:
+      discovery.type: 'single-node'
+      ES_JAVA_OPTS: '-Xmx2g'
+    volumes:
+      - esdata01:/usr/share/elasticsearch/data
+  db:
+    container_name: querscraper_db
+    image: postgres:14.1
+    # ports only needed for dev environment
+    ports:
+      - 5432:5432
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: 'OXlw5R7qJvF6Hztu'
+      POSTGRES_DB: 'querscraper'
+      POSTGRES_USER: 'querscraper_admin'
+      PGDATA: /var/lib/postgresql/data/_data/
+    volumes:
+      - /var/lib/postgresql/data:/var/lib/postgresql/data
+  adminer:
+    container_name: querscraper_db_admin
+    image: adminer
+    restart: always
+    ports:
+      - 8280:8080
+    depends_on:
+      - 'db'
+volumes:
+  esdata01:
+    driver: local

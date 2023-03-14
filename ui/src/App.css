@@ -1,0 +1,115 @@
+.App {
+  text-align: center;
+  align-content:center;
+  color:antiquewhite;
+  height: 100vh !important;
+  width: 100vw !important;
+  overflow:hidden;
+  background-color: #2c2c2c !important;
+  text-decoration: none;
+}
+
+a{
+text-decoration:none !important;
+}
+
+input.form-control{
+  background-color: rgb(36, 36, 36) !important;
+  color:antiquewhite !important;
+}
+
+.highlight{
+  background-color: rgba(255, 255, 0, 0.616);
+  font-weight: bold;
+}
+
+.recharts-default-tooltip{
+  background-color: rgb(36, 36, 36) !important;
+}
+
+a > .list-group-item:hover{
+  background-color: rgb(36, 36, 36, 0.5);
+}
+
+text.recharts-text{
+  fill:antiquewhite;
+}
+
+.force-graph-container{
+   overflow-x:hidden; 
+   margin-top:-1.5em;
+}
+
+.graph-connection-list-item:hover{ 
+  background-color: rgb(36, 36, 36, 0.5);
+}
+
+.rc-highlight {
+  color: #000000;
+  transition: all 0.5s ease-in-out;
+}
+
+.disable-select {
+  user-select: none; /* supported by Chrome and Opera */
+ -webkit-user-select: none; /* Safari */
+ -khtml-user-select: none; /* Konqueror HTML */
+ -moz-user-select: none; /* Firefox */
+ -ms-user-select: none; /* Internet Explorer/Edge */
+}
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+::-webkit-scrollbar-track {
+  background: var(#262728);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(71, 71, 71, 0.5);
+}
+
+.responsive-msg-container {
+  position: relative;
+  max-width: 100%;
+}
+
+.responsive-msg-content {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+
+tr{
+  background: rgb(20,20,20) !important;
+}
+
+th{
+  border:none !important;
+  background-color: #000000;
+}
+
+thead > tr{
+  position: sticky !important;
+  top: 0;
+  border:none;
+  background-color: #000000 !important; 
+ } 
+
+.dontbreakout{
+  overflow-wrap: break-word;
+  word-wrap: pre-wrap;
+
+  -ms-word-break: break-all;
+  /* This is the dangerous one in WebKit, as it breaks things wherever */
+  word-break: break-all;
+  /* Instead use this non-standard one: */
+  word-break: break-word;
+}
+
+nav.sticky-top{
+  background-color: rgb(30,30,30);
+  height:3em;
+}
