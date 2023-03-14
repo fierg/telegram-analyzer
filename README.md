@@ -1,11 +1,18 @@
 # telegram-analyzer
 Source Code for the Telegram Analyzer
 
-## Usage
-
 ---
 
-### Preliminaries
+#### API Setup
+
+Go to [Telegram](http://my.telegram.org) and log in.
+Click on API development tools and fill the required fields.
+
+
+copy `api_id` & `api_hash` after clicking create app, this is required by the backend.
+
+
+#### Preliminaries
 Preliminaries for proper execution include a Linux system with [Docker](https://www.docker.com/) for the backend container running the database and the elastic search indexer, [GraalVM](https://www.graalvm.org/) as JVM for the backend and [NPM](https://www.npmjs.com/) to pack and serve the frontend.
 Database and other configurations are handled by the configuration file under `src/main/resources/application.properties`.
 This also holds the required passwords for the database and telegram API IDs, so handle them with care.
